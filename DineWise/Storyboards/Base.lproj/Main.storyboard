@@ -34,7 +34,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For error handling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVD-Dj-aM9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For error handling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVD-Dj-aM9">
                                 <rect key="frame" x="62" y="442" width="269" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -118,7 +118,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For error handling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yN-KC-PZW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error handling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yN-KC-PZW">
                                 <rect key="frame" x="45" y="446" width="282" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -287,7 +287,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PjR-rJ-QLo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="Vsw-O3-FZa" kind="relationship" relationship="viewControllers" id="iLY-Tj-Vu1"/>
@@ -298,13 +298,21 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVx-e2-TBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="891" y="675"/>
+            <point key="canvasLocation" x="865" y="642"/>
         </scene>
-        <!--Item-->
+        <!--Post Review-->
         <scene sceneID="868-Qb-uya">
             <objects>
                 <navigationController id="ysz-Gd-gsq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="person.fill" catalog="system" id="Lss-6T-aMf"/>
+                    <tabBarItem key="tabBarItem" title="Post Review" id="Lss-6T-aMf">
+                        <imageReference key="image" image="square.and.arrow.up.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color systemColor="systemBlueColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6ks-Zj-Qai">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -317,11 +325,19 @@
             </objects>
             <point key="canvasLocation" x="1297" y="1374"/>
         </scene>
-        <!--Item-->
+        <!--Restaurants-->
         <scene sceneID="jLg-h9-s76">
             <objects>
                 <navigationController id="YAd-Tc-sjg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Hkz-fN-msP"/>
+                    <tabBarItem key="tabBarItem" title="Restaurants" id="Hkz-fN-msP">
+                        <imageReference key="selectedImage" image="house.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color systemColor="systemBlueColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mqW-bQ-n9G">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -334,12 +350,12 @@
             </objects>
             <point key="canvasLocation" x="424" y="1374"/>
         </scene>
-        <!--Item-->
+        <!--Explore-->
         <scene sceneID="I8I-2q-M0S">
             <objects>
                 <navigationController id="Vsw-O3-FZa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="trb-gX-u8s">
-                        <imageReference key="image" image="fork.knife.circle" catalog="system" symbolScale="large"/>
+                    <tabBarItem key="tabBarItem" title="Explore" id="trb-gX-u8s">
+                        <imageReference key="image" image="fork.knife.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1k1-o0-x8P">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
@@ -376,20 +392,20 @@
                                     <navigationItem title="Explore" id="TWI-kg-Qi4"/>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Be-sf-bH3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Be-sf-bH3">
                                 <rect key="frame" x="44" y="119" width="304" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51f-q1-BaW">
-                                <rect key="frame" x="44" y="501" width="304" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="d0447906-71b5-46a7-9b21-ddd4f384796d 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="cUa-UC-SqM">
                                 <rect key="frame" x="330" y="54" width="47" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s5F-ie-yCC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="s5F-ie-yCC">
                                 <rect key="frame" x="44" y="316" width="304" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="51f-q1-BaW">
+                                <rect key="frame" x="44" y="534" width="304" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -401,11 +417,19 @@
             </objects>
             <point key="canvasLocation" x="-457" y="2124"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="Si9-65-TNF">
             <objects>
                 <navigationController id="sJv-Sx-rWu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="star.circle" catalog="system" id="lgu-t5-kot"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="lgu-t5-kot">
+                        <imageReference key="image" image="person.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color systemColor="systemBlueColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7qi-Es-VqU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -423,7 +447,7 @@
             <objects>
                 <viewController id="pkV-XU-RPl" customClass="UserReviewsViewController" customModule="DineWise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rK5-pp-qHP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash screen (3).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="puS-bx-Xyi">
@@ -450,7 +474,7 @@
                                 <rect key="frame" x="37" y="316" width="86" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5b3-pd-F19">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="5b3-pd-F19">
                                 <rect key="frame" x="158" y="154" width="91" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -459,11 +483,15 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="User Reviews" id="z3j-2d-TdM">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="4t4-jD-42p"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="4t4-jD-42p">
+                                            <connections>
+                                                <segue destination="6Mn-Q8-Scx" kind="unwind" unwindAction="unwindToRestaurantsVCFor:towards:" id="d96-CS-0mc"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQZ-vk-u2D">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="GQZ-vk-u2D">
                                 <rect key="frame" x="37" y="154" width="86" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -485,6 +513,7 @@
                     <navigationItem key="navigationItem" id="Z8k-S2-Raq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FwU-XF-QSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6Mn-Q8-Scx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="865" y="2823"/>
         </scene>
@@ -500,27 +529,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yk1-gW-WwZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yk1-gW-WwZ">
                                 <rect key="frame" x="223" y="135" width="137" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NWx-US-fSD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="NWx-US-fSD">
                                 <rect key="frame" x="32" y="295" width="137" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R94-Zf-Vta">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="R94-Zf-Vta">
                                 <rect key="frame" x="223" y="305" width="137" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aB3-CP-MAf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="aB3-CP-MAf">
                                 <rect key="frame" x="32" y="135" width="137" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3IE-0e-dds">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="3IE-0e-dds">
                                 <rect key="frame" x="223" y="461" width="137" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Lz-2v-Bwu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Lz-2v-Bwu">
                                 <rect key="frame" x="32" y="461" width="137" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -546,21 +575,21 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="fQa-4I-ei1" kind="presentation" id="Mkh-iK-4i5"/>
+                                    <segue destination="fQa-4I-ei1" kind="presentation" modalPresentationStyle="fullScreen" id="Mkh-iK-4i5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vy-nA-bD8">
-                                <rect key="frame" x="223" y="642" width="137" height="35"/>
+                                <rect key="frame" x="234" y="642" width="133" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="User Reviews" cornerStyle="dynamic">
+                                <buttonConfiguration key="configuration" style="plain" title="Restaurant User Reviews" cornerStyle="dynamic">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" red="0.14874849079999999" green="0.41640211640000002" blue="0.2111783153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="pkV-XU-RPl" kind="presentation" id="hwF-jS-F4h"/>
+                                    <segue destination="pkV-XU-RPl" kind="presentation" modalPresentationStyle="fullScreen" id="hwF-jS-F4h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -577,7 +606,7 @@
             <objects>
                 <viewController id="LvK-o7-k8K" customClass="FavouritesViewController" customModule="DineWise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XJp-MA-a9D">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash screen (3).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KXr-q4-W0u">
@@ -589,19 +618,23 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Favourites" id="m71-TU-f4I">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="qdo-y4-FGd"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="qdo-y4-FGd">
+                                            <connections>
+                                                <segue destination="brR-uF-JdA" kind="unwind" unwindAction="unwindToUserProfileVCFor:towards:" id="ToN-0g-BFY"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sj7-sL-xZL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="sj7-sL-xZL">
                                 <rect key="frame" x="44" y="167" width="304" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Un9-eY-oLI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="Un9-eY-oLI">
                                 <rect key="frame" x="44" y="364" width="304" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJ3-8n-hvE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="LJ3-8n-hvE">
                                 <rect key="frame" x="44" y="549" width="304" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -615,22 +648,23 @@
                     <navigationItem key="navigationItem" id="ykL-3C-G2g"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asZ-Z3-vb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="brR-uF-JdA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3047" y="1796"/>
         </scene>
         <!--Restaurant Profile-->
         <scene sceneID="G5t-ZF-sN9">
             <objects>
-                <viewController title="Restaurant Profile" id="fQa-4I-ei1" sceneMemberID="viewController">
+                <viewController title="Restaurant Profile" id="fQa-4I-ei1" customClass="RestaurantProfileViewController" customModule="DineWise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wnp-55-y7L">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash screen (3).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3M5-fY-1Lm">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tos-Z5-0W9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="tos-Z5-0W9">
                                 <rect key="frame" x="210" y="479" width="167" height="327"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -653,7 +687,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Restaurant Profile" id="bHd-L6-A6A">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="hPL-ai-d8R"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="hPL-ai-d8R">
+                                            <connections>
+                                                <segue destination="Y3s-ty-PkN" kind="unwind" unwindAction="unwindToRestaurantsVCFor:towards:" id="qSc-d2-xYp"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -664,16 +702,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-7b-kUM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-7b-kUM">
                                 <rect key="frame" x="16" y="479" width="167" height="327"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OnX-5F-q8q">
-                                <rect key="frame" x="-10" y="109" width="403" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="d0447906-71b5-46a7-9b21-ddd4f384796d 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ir8-8Y-hLe">
                                 <rect key="frame" x="345" y="57" width="48" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="d0447906-71b5-46a7-9b21-ddd4f384796d 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="OnX-5F-q8q">
+                                <rect key="frame" x="-5" y="109" width="403" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -682,13 +720,14 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gZ-dL-X8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Y3s-ty-PkN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="22" y="2823"/>
         </scene>
-        <!--View Controller-->
+        <!--User Profile View Controller-->
         <scene sceneID="896-rE-rDG">
             <objects>
-                <viewController id="8JN-a0-L7q" sceneMemberID="viewController">
+                <viewController id="8JN-a0-L7q" customClass="UserProfileViewController" customModule="DineWise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qEC-zi-S0c">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -719,7 +758,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="LvK-o7-k8K" kind="presentation" id="KPZ-6D-GG2"/>
+                                    <segue destination="LvK-o7-k8K" kind="presentation" modalPresentationStyle="fullScreen" id="KPZ-6D-GG2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckJ-2x-AIC">
@@ -733,7 +772,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="DeT-1F-YLP" kind="presentation" id="10k-E9-KLn"/>
+                                    <segue destination="DeT-1F-YLP" kind="presentation" modalPresentationStyle="fullScreen" id="10k-E9-KLn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74M-hx-ksl">
@@ -760,10 +799,10 @@
             </objects>
             <point key="canvasLocation" x="2111" y="2124"/>
         </scene>
-        <!--Restaurant Login View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="m3o-Zr-9RA">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="JLS-sw-ZzN" customClass="RestaurantLoginViewController" customModule="DineWise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="JLS-sw-ZzN" customClass="RegisterViewController" customModule="DineWise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N2V-CZ-Sls">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -785,7 +824,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For error handling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0W-Ha-cF7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For error handling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0W-Ha-cF7">
                                 <rect key="frame" x="62" y="442" width="269" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -816,7 +855,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="registerButtonTapped:" destination="JLS-sw-ZzN" eventType="touchUpInside" id="cfc-yp-esx"/>
+                                    <action selector="registerButtonTapped:" destination="JLS-sw-ZzN" eventType="touchUpInside" id="rsN-YL-bTb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeC-nE-VfS">
@@ -851,10 +890,10 @@
             </objects>
             <point key="canvasLocation" x="2233" y="-35"/>
         </scene>
-        <!--Customer Login Controller-->
+        <!--Restaurant Login View Controller-->
         <scene sceneID="hWx-Xt-GO4">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="E5v-iN-6NR" customClass="CustomerLoginController" customModule="DineWise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="E5v-iN-6NR" customClass="RestaurantLoginViewController" customModule="DineWise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TBo-yG-vmT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -869,7 +908,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For error handling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azH-p3-lPp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For error handling" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azH-p3-lPp">
                                 <rect key="frame" x="45" y="446" width="282" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -964,12 +1003,12 @@
             </objects>
             <point key="canvasLocation" x="1297" y="-35"/>
         </scene>
-        <!--User Reviews View Controller-->
+        <!--My Reviews View Controller-->
         <scene sceneID="eX9-M9-6Kh">
             <objects>
-                <viewController id="DeT-1F-YLP" customClass="UserReviewsViewController" customModule="DineWise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DeT-1F-YLP" customClass="MyReviewsViewController" customModule="DineWise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S1L-vH-yp3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash screen (3).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vsy-hb-vpI">
@@ -1005,7 +1044,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="My Reviews" id="Frp-nC-Y1p">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="bZl-T2-zLp"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="bZl-T2-zLp">
+                                            <connections>
+                                                <segue destination="zQq-ij-dvg" kind="unwind" unwindAction="unwindToUserProfileVCFor:towards:" id="ZhG-7B-Nde"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1031,6 +1074,7 @@
                     <navigationItem key="navigationItem" id="eLe-jf-97z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvP-uD-aXD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="zQq-ij-dvg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3047" y="2459"/>
         </scene>
@@ -1080,7 +1124,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="duC-0K-abV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoIcon.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="duC-0K-abV">
                                 <rect key="frame" x="76" y="195" width="240" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1102,12 +1146,27 @@
         <image name="Splash screen (3).jpg" width="430" height="932"/>
         <image name="d0447906-71b5-46a7-9b21-ddd4f384796d 1.png" width="172" height="172"/>
         <image name="fork.knife.circle" catalog="system" width="128" height="123"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="logoIcon.jpeg" width="406" height="406"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="star.circle" catalog="system" width="128" height="123"/>
+        <image name="pngtree-fast-food-big-ham-burger-png-image_8648590.png" width="1200" height="1200"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="117" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>

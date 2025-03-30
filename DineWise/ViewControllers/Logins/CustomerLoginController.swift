@@ -32,7 +32,7 @@ class CustomerLoginController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { result, error in
                 if let error = error {
                     self.messageLabel.text = "Error: \(error.localizedDescription)"
-                    self.messageLabel.textColor = .red
+                    self.messageLabel.textColor = .orange
                 } else {
                     self.messageLabel.text = "Login successful!"
                     self.messageLabel.textColor = .green

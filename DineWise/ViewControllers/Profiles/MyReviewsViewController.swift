@@ -1,14 +1,13 @@
 //
-//  RestaurantsViewController.swift
+//  MyReviewsViewController.swift
 //  DineWise
 //
-//  Created by Muhammad Mahad on 2025-03-23.
+//  Created by Muhammad Mahad on 2025-03-25.
 //
 
 import UIKit
-import FirebaseFirestore
 
-class RestaurantsViewController: UIViewController {
+class MyReviewsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
