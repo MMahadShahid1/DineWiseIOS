@@ -291,7 +291,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Vsw-O3-FZa" kind="relationship" relationship="viewControllers" id="iLY-Tj-Vu1"/>
-                        <segue destination="YAd-Tc-sjg" kind="relationship" relationship="viewControllers" id="yRJ-3K-iqU"/>
+                        <segue destination="Yq3-sH-XVe" kind="relationship" relationship="viewControllers" id="4jZ-Z5-oGr"/>
                         <segue destination="ysz-Gd-gsq" kind="relationship" relationship="viewControllers" id="9Hr-f7-Bhd"/>
                         <segue destination="sJv-Sx-rWu" kind="relationship" relationship="viewControllers" id="Rlm-93-96b"/>
                     </connections>
@@ -325,34 +325,10 @@
             </objects>
             <point key="canvasLocation" x="1297" y="1374"/>
         </scene>
-        <!--Restaurants-->
-        <scene sceneID="jLg-h9-s76">
-            <objects>
-                <navigationController id="YAd-Tc-sjg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Restaurants" id="Hkz-fN-msP">
-                        <imageReference key="selectedImage" image="house.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color systemColor="systemBlueColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mqW-bQ-n9G">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="fnG-oE-Ijg" kind="relationship" relationship="rootViewController" id="Zb2-kO-dzs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Bn-Ku-mGl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="424" y="1374"/>
-        </scene>
         <!--Explore-->
         <scene sceneID="I8I-2q-M0S">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMy-E1-ECk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Vsw-O3-FZa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" id="trb-gX-u8s">
                         <imageReference key="image" image="fork.knife.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single"/>
@@ -365,7 +341,6 @@
                         <segue destination="lRM-Tg-5Vy" kind="relationship" relationship="rootViewController" id="DFC-iz-nqD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vMy-E1-ECk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-457" y="1374"/>
         </scene>
@@ -515,7 +490,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FwU-XF-QSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="6Mn-Q8-Scx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="865" y="2823"/>
+            <point key="canvasLocation" x="808" y="2855"/>
         </scene>
         <!--Restaurants View Controller-->
         <scene sceneID="6Td-vw-IUI">
@@ -620,7 +595,7 @@
                                     <navigationItem title="Favourites" id="m71-TU-f4I">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="qdo-y4-FGd">
                                             <connections>
-                                                <segue destination="brR-uF-JdA" kind="unwind" unwindAction="unwindToUserProfileVCFor:towards:" id="ToN-0g-BFY"/>
+                                                <segue destination="brR-uF-JdA" kind="unwind" unwindAction="unwindToUserProfileVCFor:towards:" id="9OY-q1-jd7"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -722,7 +697,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gZ-dL-X8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Y3s-ty-PkN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="22" y="2823"/>
+            <point key="canvasLocation" x="85" y="2855"/>
         </scene>
         <!--User Profile View Controller-->
         <scene sceneID="896-rE-rDG">
@@ -789,11 +764,21 @@
                                     <segue destination="QSD-kS-nM9" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="xUF-zx-HvN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customer Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YpO-25-CsG">
+                                <rect key="frame" x="134" y="185" width="124" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NhF-sK-Knj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="hxk-MX-RPF"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="YpO-25-CsG" id="roR-r5-97W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNW-O9-mQ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -988,6 +973,21 @@
                                 <rect key="frame" x="332" y="55" width="45" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y65-Kp-7BJ">
+                                <rect key="frame" x="86" y="553" width="221" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login Place Holder" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.14874849079999999" green="0.41640211640000002" blue="0.2111783153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="E5v-iN-6NR" eventType="touchUpInside" id="pl0-xs-blp"/>
+                                    <segue destination="cVr-m7-RHC" kind="presentation" modalPresentationStyle="fullScreen" id="wTc-ea-LYi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6cg-YK-9LK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1046,7 +1046,7 @@
                                     <navigationItem title="My Reviews" id="Frp-nC-Y1p">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="bZl-T2-zLp">
                                             <connections>
-                                                <segue destination="zQq-ij-dvg" kind="unwind" unwindAction="unwindToUserProfileVCFor:towards:" id="ZhG-7B-Nde"/>
+                                                <segue destination="zQq-ij-dvg" kind="unwind" unwindAction="unwindToUserProfileVCFor:towards:" id="EBh-t8-Yx7"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1137,6 +1137,101 @@
             </objects>
             <point key="canvasLocation" x="1296.9465648854962" y="2123.9436619718313"/>
         </scene>
+        <!--Explore-->
+        <scene sceneID="Yee-Ft-z7b">
+            <objects>
+                <navigationController id="Yq3-sH-XVe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explore" id="hgb-tm-e7F">
+                        <imageReference key="image" image="house.lodge.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MK9-Zc-f8I">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fnG-oE-Ijg" kind="relationship" relationship="rootViewController" id="wFs-aN-mCi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBM-6j-35s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="1374"/>
+        </scene>
+        <!--Restaurant Profile-->
+        <scene sceneID="pHQ-sA-0Qc">
+            <objects>
+                <viewController title="Restaurant Profile" id="cVr-m7-RHC" customClass="RestaurantProfileViewController" customModule="DineWise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sT2-qn-3lP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash screen (3).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="S66-ID-Xje">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="4rW-jR-jXC">
+                                <rect key="frame" x="210" y="479" width="167" height="327"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of the Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhJ-g5-SZb">
+                                <rect key="frame" x="40" y="348" width="276" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of the Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDl-Il-4Yh">
+                                <rect key="frame" x="40" y="403" width="276" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PeP-ro-mC4">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Restaurant Profile" id="Tur-RD-pzM">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="pH4-R5-cDv">
+                                            <connections>
+                                                <segue destination="nhW-wF-AhY" kind="unwind" unwindAction="unwindToRestaurantsVCFor:towards:" id="3XD-lk-j3P"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of the Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfg-qO-AeS">
+                                <rect key="frame" x="40" y="301" width="276" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pngtree-fast-food-big-ham-burger-png-image_8648590.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ctt-of-xO2">
+                                <rect key="frame" x="16" y="479" width="167" height="327"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="d0447906-71b5-46a7-9b21-ddd4f384796d 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="5NN-bK-Efj">
+                                <rect key="frame" x="345" y="57" width="48" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="d0447906-71b5-46a7-9b21-ddd4f384796d 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="UsC-UQ-gcV">
+                                <rect key="frame" x="-5" y="109" width="403" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.up.on.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vsj-rv-Klq">
+                                <rect key="frame" x="270" y="306.66666666666669" width="81" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pzR-sl-6js"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coh-wf-jg2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="nhW-wF-AhY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3101.5267175572517" y="650"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="xUF-zx-HvN"/>
@@ -1146,11 +1241,12 @@
         <image name="Splash screen (3).jpg" width="430" height="932"/>
         <image name="d0447906-71b5-46a7-9b21-ddd4f384796d 1.png" width="172" height="172"/>
         <image name="fork.knife.circle" catalog="system" width="128" height="123"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="house.lodge.fill" catalog="system" width="128" height="63"/>
         <image name="logoIcon.jpeg" width="406" height="406"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="pngtree-fast-food-big-ham-burger-png-image_8648590.png" width="1200" height="1200"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="117" height="128"/>
+        <image name="square.and.arrow.up.on.square.fill" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
